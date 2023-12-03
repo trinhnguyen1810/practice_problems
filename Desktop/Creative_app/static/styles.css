@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(45deg, #fcfcfc, #f0f0f0);
+}
+
+.container {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, #ffffff, #f0f0f0);
+}
+
+.title-font {
+    font-family: 'Caveat', cursive;
+    color: #2ecc71;
+}
+
+.story-box {
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff, #f0f0f0);
+}
+
+.last-sentence {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.sentence-label {
+    margin-bottom: 12px;
+    color: #495057;
+}
+
+.sentence-textarea {
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.sentence-textarea:focus {
+    border-color: #28a745;
+}
+
+.add-sentence-btn {
+    border-radius: 12px;
+    background: linear-gradient(180deg, #2ecc71, #28a745);
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.add-sentence-btn:hover {
+    background: linear-gradient(180deg, #28a745, #218838);
+}
+
+.reset-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.reset-link:hover {
+    text-decoration: underline;
+}

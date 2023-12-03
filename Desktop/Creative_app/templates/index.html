@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@300&display=swap">
+    <title>Collaborative Story App</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4 title-font">Collaborative Story App</h1>
+        <div class="story-box p-4 mb-4">
+            {% if last_sentence %}
+                <p class="last-sentence">{{ last_sentence }}</p>
+            {% endif %}
+        </div>
+        <form action="/add_sentence" method="post">
+            <div class="form-group">
+                <label for="sentence" class="sentence-label">Continue the story:</label>
+                <textarea id="sentence" name="sentence" class="form-control sentence-textarea" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block add-sentence-btn">Add Sentence</button>
+        </form>
+        <a href="/reset_story" class="d-block text-center mt-4 reset-link">Start a New Story</a>
+    </div>
+</body>
+</html>
